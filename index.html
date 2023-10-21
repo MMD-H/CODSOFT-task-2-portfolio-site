@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>portfolio</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Haroon's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a>Home</a></li>
+            <li><a>Contact me</a></li>
+            <li><a>Services</a></li>
+            <li><a href="/">Projects</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          Hi,My name is <span class="purple">M.Haroon </span> 
+          <div>and I am a</div>
+          <span id="element"></span>
+          <div class="buttons">
+            <button class="btn">Download Resume</button>
+            <button id="githubButton" class="btn">Visit Github</button>
+          </div>
+        </div>
+        <div class="rightSection">
+          <img src="developer.png" alt="developer image" />
+        </div>
+      </section>
+      <hr />
+      <section class="secondSection">
+        <span class="text-gray">What I have Done so far</span>
+        <h1>Work Experience</h1>
+        <div class="box">
+          <div class="vertical">
+            <img class="image-top" src="developer.png" alt="" />
+            <div class="vertical-title">HTML,CSS</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              explicabo officiis aliquam porro minus voluptatem perferendis
+              reiciendis, ratione similique culpa.
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="developer.png" alt="" />
+            <div class="vertical-title">Javascript</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              explicabo officiis aliquam porro minus voluptatem perferendis
+              reiciendis, ratione similique culpa.
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="developer.png" alt="" />
+            <div class="vertical-title">React.Js</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              explicabo officiis aliquam porro minus voluptatem perferendis
+              reiciendis, ratione similique culpa.
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="developer.png" alt="" />
+            <div class="vertical-title">Node.Js</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              explicabo officiis aliquam porro minus voluptatem perferendis
+              reiciendis, ratione similique culpa.
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="developer.png" alt="" />
+            <div class="vertical-title">MongoDB</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              explicabo officiis aliquam porro minus voluptatem perferendis
+              reiciendis, ratione similique culpa.
+            </div>
+          </div>
+          <!-- <div class="vertical">
+            <img class="image-top" src="developer.png" alt="" />
+            <div class="vertical-title">HTML</div>
+            <div class="vertical-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              explicabo officiis aliquam porro minus voluptatem perferendis
+              reiciendis, ratione similique culpa.
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footer-first">Haroon's Developer Portfolio</div>
+        <div class="footer-second">
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+          </ul>
+        </div>
+        <div class="footer-third">
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+          </ul>
+        </div>
+        <div class="footer-fourth">
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-rights">
+        Copyright &#169; www.Haroon's Developer Portfolio || All Rights Reserved
+      </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Developer."],
+        typeSpeed: 50,
+      });
+      // Select the button element by its ID
+      const githubButton = document.getElementById("githubButton");
+
+      // Add a click event listener to the button
+      githubButton.addEventListener("click", function () {
+        // Replace 'your-username' and 'your-repository' with your GitHub username and repository name
+        const githubRepoURL = "https://github.com/MMD-H/MHaroon";
+
+        // Redirect to the GitHub repository
+        window.location.href = githubRepoURL;
+      });
+      // script.js
+      document.getElementById("btn").addEventListener("click", function () {
+        // Create a fake link element
+        const link = document.createElement("a");
+        link.href = "path/to/your/resume.pdf"; // Replace with the actual path to your CV file
+        link.download = "resume.pdf"; // Set the download file name
+
+        // Append the link to the document and trigger the download
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+    </script>
+  </body>
+</html>
